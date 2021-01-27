@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 HTML Forms</title>
+</head>
+<body>
+<h1>Forms Demo</h1>
+
+<form action="/tacos">
+    <p>
+        <label for="login">Where do you want to log in </label>
+        <select name="login" id="where">
+            <option value="llama">llama.com</option>
+            <option value="Google">Google</option>
+            <option value="FB">FB</option>
+        </select>
+    </p>
+    <p>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username" name="username" required minlength="6" maxlength="12" >
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="passsword" name="password">
+    </p>
+
+    <input type="checkbox" id="cb" name="cb>
+    <label for="cb">Remember login ?</label>
+    <p>So you agree to the terms and conditions ?
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="TandC">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="TandC">
+
+    </p>
+    <p>
+        <label for="feel"></label>
+        <input type="range" name="feeling" id="feel" min="0" max="5" value="4">
+    </p>
+    <label for="ta">What are you thinking ?</label>
+<textarea rows="8" cols="30" placeholder="Any thoughts" id="ta"></textarea>
+
+
+    <button>Log in</button>
+
+</form>
+</body>
+</html>

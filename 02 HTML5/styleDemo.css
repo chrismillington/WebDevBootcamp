@@ -1,0 +1,11 @@
+header{
+    background-color: skyblue;
+}
+figure{
+    color:red;
+    background-color: gray;
+}
+figure img{
+    margin-left:25px;
+    margin-top:25px;
+}
