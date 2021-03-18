@@ -1,0 +1,13 @@
+body{
+    margin:5%;
+    padding:0;
+}
+img{
+    width:30%;
+    margin:1.5%;
+}
+nav{
+    font:40pt Roboto;
+    text-transform: uppercase;
+    margin-left:1.5%;
+}

@@ -1,0 +1,24 @@
+#one{
+    width:400px;
+    height:300px;
+    padding:20px;
+    border:5px dotted purple;
+
+}
+#two{
+    width:400px;
+    height:300px;
+    border:2px solid blue;
+    border-top:4px dashed red;
+    float:left;
+}
+#three{
+    width:400px;
+    height:300px;
+    border:2px dashed red;
+    border-radius:25%;
+    margin:50px;
+    margin-top:-20px;
+    Padding:30px;
+    display:inline-block;
+}

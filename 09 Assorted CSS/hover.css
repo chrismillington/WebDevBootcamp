@@ -1,0 +1,17 @@
+#button{
+    height:50px;
+    width:100px;
+    background-color: lightgrey;
+    text-align: center;
+    position:relative;
+    box-shadow: 1px 1px rgb(0,0,0);
+    border:solid 1px darkgray;
+}
+#button:hover{
+    top:-2px;
+    box-shadow: 5px 5px rgb(0,0,0);
+}
+#button:active{
+    top:1px;
+    box-shadow: 2px 2px rgb(0,0,0);
+}

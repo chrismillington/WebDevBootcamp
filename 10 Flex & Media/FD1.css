@@ -1,0 +1,49 @@
+#container{
+    background-color: black;
+    width:80%;
+    height:500px;
+    margin:Auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+#container div{
+    width:100px;
+    height:100px;
+}
+@media screen and (max-width:799px){
+    body{background-color: red}
+    #container{
+        flex-direction: column;
+    }
+}
+@media screen and ( min-width:800px ){
+    body{background-color: blue}
+    #container{
+        flex-direction: row;
+    }
+}
+
+
+
+#one{
+    background-color: magenta;
+    flex:3 1 400px;
+
+}
+#two{
+    background-color: red;
+    flex:2 1;
+}
+#three{
+    background-color: green;
+    flex:1 1 250px;
+}
+#four{
+    background-color: blue;
+    flex:3 1;
+}
+#five{
+    background-color: yellow;
+    flex:1 1 200px;
+}
