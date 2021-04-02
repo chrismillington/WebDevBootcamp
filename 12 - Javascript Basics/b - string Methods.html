@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="img/basicStyle.css">
+</head>
+<body>
+<h1>String Methods</h1>
+<p>Strings are arrays or characters, letters in a string can be referred to using square brackets and a number representing thier position </p>
+<p>Length returns the length of a string</p>
+<p>trim removes white space from start and end </p>
+<p>toUpperCase or toLowercase changes the case the letters are in </p>
+
+<img src="img/bStringMethods.PNG" height="177" width="574"/>
+<script>
+    let text = "    I'm the scatman";
+    let c = text.length;
+    let trim = text.trim();
+    alert("Trim removed " + (text.length-trim.length) + " Characters")
+    alert(trim.toUpperCase());
+    alert(trim.toLocaleLowerCase());
+</script>
+</body>
+</html>
