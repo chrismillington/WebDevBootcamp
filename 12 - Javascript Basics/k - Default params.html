@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>DEfault params</h1>
+<p>JS Functions do not always require parameters</p>
+<script>
+    function rollDie1(numSides){
+        return Math.floor(Math.random()*numSides)+1;
+    }
+    console.log(rollDie1(6));
+    // How do I set 6 as the default answer if the use doesn't give a parameter ?
+    //Old way
+    function rollDie2(numSides){
+        numSides = numSides === undefined ? 6:numSides;// awkwrd, exspecially with multiple parameters
+        return Math.floor(Math.random()*numSides)+1;
+    }
+    //new way
+    function rollDie3(numSides=6){ // Default parameters should awlays come second :-)
+        return Math.floor(Math.random()*numSides)+1;
+    }
+    console.log("Roll dice 3 " , rollDie3());
+</script>
+</body>
+</html>
