@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="img/basicStyle.css">
+</head>
+<body>
+<script>
+    let anArray = [76, "Trombones","led", "the","big","parade"];
+    let numArray = [17,21,22,38,53,47];
+    // for each
+    anArray.forEach(function(el){
+      console.log(el);
+    });
+
+    // Array callback
+
+    let movies = [
+        {title:"Sliding Doors ",score:"90" },
+        {title:"Shakespeare in Love ",score:"90" },
+        {title:"The World is not enough ",score:"100" },
+        {title:"Wild Wild West ",score:"75" },
+    ]
+    movies.forEach(function(movie){ // This is an array callback method
+        console.log(`${movie.title} - ${movie.score}/100`)
+    });
+
+    // Map - map lets you modify an entire array without a loop
+    const doubles = numArray.map(function(num){ // Makes a new array called doubles
+        return num*2;
+    })
+    console.log(numArray);
+    console.log(doubles);
+
+    // Map can take data and use transform it quickly
+    movies.map(function(film){
+        console.log(film.title);
+    })
+
+    let cleanNames = (["   Jessica","Alison    ","Phillipa","    Sue    "]);
+    let trimNames = cleanNames.map(function(nm){
+        return nm.trim();
+    });
+    console.log(trimNames);
+
+    // Arrow Functions - Are the ES6 way of defining functions
+    //They are more compact than regular functions
+    console.log("Arrow Function ");
+    movies.map((film) =>{
+        console.log(film.title);
+    })
+    console.log("Arrow Function 2");
+    const add = (x,y) =>{
+        return x+y;
+    }
+    console.log(add(4,9));
+
+    console.log("Arrow Function Ex. ");
+    const greet = (name) => {
+        return (`Hey ${name}!`);
+    }
+    console.log(greet("Delilah"));
+    // You can remove the return keyword in certain situations. TO do this , you use round brackets after the arrow rather than squiggly
+    // These can be further simplified by putting it on one line
+    console.log("Arrow Function 3");
+    const addAgain = (x,y) =>( x+y );
+    console.log(addAgain(4,9));
+
+    console.log("Movies arrowed");
+    console.log(movies.map( (film) => `Movie : ${film.title}`));
+
+
+
+</script>
+
+</body>
+</html>

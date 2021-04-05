@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeout, interval & Filter</title>
+</head>
+<body>
+<h1>Timeout, interval & Filter</h1>
+<script>
+    //Set Time out lets you delay argument
+    setTimeout(()=> { // Calls an anonymous function
+        console.log("Hello, is there an echo ?");
+    },3000) // Gives time in ms
+    setTimeout(()=> { // Calls an anonymous function
+        console.log("yes there is  ?");
+    },4000) // Gives time in ms
+// Times are given from start or program, not previous
+
+    //Set Interval - Will run perpetually
+    setInterval(() => {
+        console.log(Math.random())
+    },3000)
+
+</script>
+</body>
+</html>

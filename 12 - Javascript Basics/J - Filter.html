@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter</title>
+</head>
+<body>
+<script>
+    //Filter will return only values which meet criteria from an array
+    const numb = [2,6,3,7,2,6,7,8];
+    let movies = [
+        {title:"Sliding Doors ",score:"90" },
+        {title:"Shakespeare in Love ",score:"90" },
+        {title:"The World is not enough ",score:"100" },
+        {title:"Wild Wild West ",score:"75" },
+    ];
+    const best = movies.filter( movie =>( movie.score>80));
+    console.log(best);// best has all movies filtered above 80
+
+    let userNames = ["Wojtek","MagdalenaTuskevic","GrzegorzDzienkuje","Kinga Tusnevsky"];
+    const validUserNames = userNames.filter(nm => nm.length<10);
+    console.log(validUserNames);
+
+    //Every and Some
+
+    //Every and some return booleans
+    const exam = [ 67,75,72,81,89,80 ];
+    console.log("Every - "+ exam.every(res => res>=65)); // true
+    console.log("Some - "+ exam.some(res => res>=90)); //false
+
+    // Reduce
+     // Reduce Follows 2 parameters to reduce an array to 1 object
+
+    const prices = [1.99, 3.99, 4.29,6.99,10];
+    const total = prices.reduce((acc,cur) => acc+ cur);
+    // reduce letes you loop through an array and perofm maths,
+    // reducing it to a single value
+    console.log(total);
+</script>
+
+</body>
+</html>
