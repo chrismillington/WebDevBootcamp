@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectors</title>
+</head>
+<body>
+<h1>Selectors</h1>
+<p id="para">Some Text</p>
+<script>
+    document.getElementById("para").innerText = "Push da button";
+</script>
+<h1>GetElementByClass</h1>
+<p class="point">One</p>
+<p class="point">Two</p>
+<p class="point">Three</p>
+<p class="point">Four</p>
+<p>These will generate an HTML collection which is iterable, but is not an array</p>
+<script>
+    let points = document.getElementsByClassName("point");
+    for(let x of points){
+       x.innerHTML = "Donkey";
+       x.style = "color:red"
+    }
+</script>
+
+<h1>by tag name</h1>
+<p>This will select all h3 tags</p>
+<h3>h3 tag</h3>
+<h3>h3 tag</h3>
+<h3>h3 tag</h3>
+<script>
+    let tag = document.getElementsByTagName(h3);
+    for(let t of tag){
+        t.innerHTML = "getElemetByTag";
+    }
+</script>
+</body>
+</html>

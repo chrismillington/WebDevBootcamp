@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width:80%;
+            height:300px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<h1>Query Selector</h1>
+<p> Query Selector works for all ( tag / ID / Class )</p>
+<p>IT returna the first instance only</p>
+<p id="first" class="para">First</p>
+<p id="second" class="para">Second</p>
+<p class="para">Third</p>
+
+<script>
+    let one = document.querySelector("#first");
+    one.style = "font:40pt Arial;";
+    let para = document.querySelectorAll(".para");
+    para[1].style = "color:red";
+    let all = document.querySelectorAll(".para");
+    for ( let x of all){
+        x.style.setProperty("background-color","yellow");
+    }
+
+</script>
+<div id="box">
+    let one = document.querySelector("#first"); - Select the first tag<br>
+    one.style = "font:40pt Arial;";<br>
+    let para = document.querySelectorAll(".para");<br>
+    para[1].style = "color:red";<br>
+    let all = document.querySelectorAll(".para");<br>
+    for ( let x of all){<br>
+    x.style.setProperty("background-color","yellow"); ->Sets background for all para tags<br>
+    }<br>
+</div>
+
+
+
+
+
+</body>
+</html>

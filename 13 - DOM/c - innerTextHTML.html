@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Inner Text and InnerHTML</title>
+</head>
+<body>
+<h1>Inner Text and HTML</h1>
+<img src="https://assets.vogue.com/photos/58915589e8e3104f57c72955/1:1/w_640,h_640,c_limit/funny-instagram-accounts-12-beigecardigan.jpg" alt="">
+
+<p>Spicy jalapeno bacon ipsum dolor amet pork loin frankfurter shoulder ham hock, burgdoggen cow ball tip tri-tip capicola shankle brisket alcatra boudin flank shank. Drumstick strip steak turkey doner chuck. Tenderloin jowl burgdoggen bacon drumstick salami, boudin cupim t-bone strip steak. Tenderloin pork sausage pastrami frankfurter beef ribs ham pig chislic capicola ham hock jerky venison spare ribs.
+</p>
+<p>T-bone shankle bresaola pig pork loin, sausage boudin. Cupim pancetta chislic strip steak picanha jerky drumstick ball tip. Sausage kevin ball tip chislic landjaeger, cow t-bone jowl filet mignon. Short ribs jerky porchetta, pork chop bacon pancetta ham. Prosciutto tri-tip kevin strip steak. Sirloin chislic alcatra, bresaola ground round andouille meatball sausage.
+</p>
+<p>Cow ham hock landjaeger sausage beef ribs. Meatball tenderloin meatloaf corned beef, tri-tip buffalo doner. Pork chop salami ground round tri-tip, meatball turducken brisket chuck biltong doner shankle tail filet mignon frankfurter. Pastrami turkey pork loin venison sirloin. Ball tip kielbasa chuck spare ribs chislic sausage shank strip steak picanha alcatra venison filet mignon. Burgdoggen frankfurter flank pork loin pancetta shoulder jowl filet mignon venison strip steak sirloin capicola biltong andouille. Pork chop hamburger boudin pastrami, bresaola brisket meatball venison buffalo capicola beef shank rump tenderloin ground round.
+</p>
+<script>
+    const p1 = document.querySelectorAll("p"); // Create an array called p1
+    for ( let x = 0;x<p1.length;x++){ // Looping to p1 length
+        console.log(p1[x].innerHTML);// display tag content
+    }
+    p1[0].innerText = "That's the badger";// Change the first paragraph
+
+</script>
+</body>
+</html>
