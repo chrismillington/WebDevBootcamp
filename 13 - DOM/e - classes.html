@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Inner Text and InnerHTML</title>
+    <title>Title</title>
     <style>
         .red{
             color:red;
+            background-color: yellow;
+        }
+        .yellow{
+            color:yellow;
+            background-color: red;
         }
     </style>
 </head>
 <body>
-<h1>Inner Text and HTML</h1>
+<h1>Inner Text and classes</h1>
 <img src="https://assets.vogue.com/photos/58915589e8e3104f57c72955/1:1/w_640,h_640,c_limit/funny-instagram-accounts-12-beigecardigan.jpg" alt="">
-
+<h2>Porky</h2>
 <p>Spicy jalapeno bacon ipsum dolor amet pork loin frankfurter shoulder ham hock, burgdoggen cow ball tip tri-tip capicola shankle brisket alcatra boudin flank shank. Drumstick strip steak turkey doner chuck. Tenderloin jowl burgdoggen bacon drumstick salami, boudin cupim t-bone strip steak. Tenderloin pork sausage pastrami frankfurter beef ribs ham pig chislic capicola ham hock jerky venison spare ribs.
 </p>
 <p>T-bone shankle bresaola pig pork loin, sausage boudin. Cupim pancetta chislic strip steak picanha jerky drumstick ball tip. Sausage kevin ball tip chislic landjaeger, cow t-bone jowl filet mignon. Short ribs jerky porchetta, pork chop bacon pancetta ham. Prosciutto tri-tip kevin strip steak. Sirloin chislic alcatra, bresaola ground round andouille meatball sausage.
@@ -20,17 +25,21 @@
 <p>Cow ham hock landjaeger sausage beef ribs. Meatball tenderloin meatloaf corned beef, tri-tip buffalo doner. Pork chop salami ground round tri-tip, meatball turducken brisket chuck biltong doner shankle tail filet mignon frankfurter. Pastrami turkey pork loin venison sirloin. Ball tip kielbasa chuck spare ribs chislic sausage shank strip steak picanha alcatra venison filet mignon. Burgdoggen frankfurter flank pork loin pancetta shoulder jowl filet mignon venison strip steak sirloin capicola biltong andouille. Pork chop hamburger boudin pastrami, bresaola brisket meatball venison buffalo capicola beef shank rump tenderloin ground round.
 </p>
 <script>
-    const p1 = document.querySelectorAll("p"); // Create an array called p1
-    for ( let x = 0;x<p1.length;x++){ // Looping to p1 length
-        console.log(p1[x].innerHTML);// display tag content
-    }
-    p1[0].innerText = "That's the badger";// Change the first paragraph
-    //Below. I am shcnaing an attribute ( the src of a pic ) using setAttribute
-    document.querySelector("img").setAttribute("src","https://www.hellomagazine.com/imagenes/royalty/20210331110060/the-queen-visits-royal-australian-air-force-runnymede/0-531-522/queen-runnymede1-m.jpg?ezimgfmt=rs:412x412/rscb5/ng:webp/ngcb5");
-    document.querySelector("h1").style.color = "red"; // adds an inline style
-    document.querySelector("h1")  // adding a class instead
-    p1.style.alignContent = "center";
-    img.style.borderRadius = "50%";
+    let h1 = document.querySelector("h1");
+    let h2 = document.querySelector("h2");
+
+    //h2.setAttribute("class","yellow"); // This works, but is inefficient, adding more attributes is tricky
+
+    h2.classList.add("red"); // This is a quicker, simpler way to add classes. It doesn't remove previous classes
+    h2.classList.remove("red"); // This removes them too
+    // Toggle toggles classes on or off
+    h2.classList.toggle("red"); // on
+    h2.classList.toggle("red"); // off
+    h2.classList.toggle("red"); // on
+
+    // h1.classList.add("yellow");
+    h1.classList.contains("yellow") === false ?  h1.classList.add("yellow") : h1.classList.remove("yellow")
+
 </script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Events</h1>
+
+<button onclick="alert(' baby one more time')">Hit me </button><br>
+<button id="bttn">One</button>
+<button id="bttn2">Two</button>
+<br>
+<button id="v3">V3</button>
+<script>
+    /* There are only 3 ways to respond to events
+    / 1. onclick is possible, but not encouraged
+    */
+
+    // 2. Is better as you are running it from JS
+    let bttn = document.querySelector("#bttn");
+    bttn.onclick = ()=>{lesMis()};
+
+
+
+
+    let bttn2 = document.querySelector("#bttn2");
+    bttn2.onclick = lesMis;
+
+    function lesMis(){
+        console.log("Do you hear the people sing ?");
+    }
+    // 3. use generic listener#
+    const v3 = document.querySelector("#v3");
+    v3.addEventListener('click',()=>{
+       alert("Clicked !!!!");
+    });
+
+
+
+
+</script>
+</body>
+</html>

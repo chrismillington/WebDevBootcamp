@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        button{
+            margin:0 auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="RGBval">rgb</h1>
+    <button>Change</button>
+
+    <script>
+        let rgb = document.querySelector("#RGBval");
+        let button = document.querySelector("button");
+        let body = document.querySelector("body")
+
+        button.addEventListener("mouseup",()=>{
+            let col = `RGB(${RGBgen()}, ${RGBgen()}, ${RGBgen()} )`;
+            body.style.backgroundColor = col;
+            rgb.innerHTML = col;
+        });
+
+
+        function RGBgen(){
+            return Math.floor(Math.random()*255);
+        }
+    </script>
+
+
+</body>
+</html>
